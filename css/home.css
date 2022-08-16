@@ -1,0 +1,91 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+header {
+  width: 60%;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+}
+
+.header-title {
+  margin-left: 4rem;
+  font-weight: 900;
+}
+
+.header-search-btn {
+  position: relative;
+  background-color: rgb(226, 226, 226);
+  right: 6.3vh;
+  border: none;
+  font-size: 1rem;
+}
+
+.header-search {
+  margin-left: 60px;
+  background-color: rgb(226, 226, 226);
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter var", sans-serif;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-buttons {
+  margin-right: 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-end;
+}
+
+.header-buttons a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  gap: 8px;
+  align-items: center;
+}
+
+@media screen and (max-width: 1744px) {
+  header {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1498px) {
+  header {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1498px) {
+  header {
+    width: 100%;
+  }
+}
