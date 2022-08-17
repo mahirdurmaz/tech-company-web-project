@@ -12,55 +12,77 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Inter var", sans-serif;
 }
 
-nav {
+body {
+  overflow: auto;
+}
+
+.wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  height: 12vh;
 }
 
 header {
-  width: 60%;
   padding: 1.2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 8vh;
+  border-bottom: 1px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-title {
-  margin-left: 4rem;
   font-weight: 900;
+  margin-right: 2rem;
 }
 
-.header-search-btn {
-  position: relative;
-  background-color: rgb(226, 226, 226);
-  right: 6.3vh;
-  border: none;
-  font-size: 1rem;
-}
-
-.header-search {
-  margin-left: 60px;
-  background-color: rgb(226, 226, 226);
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  font-family: "Inter var", sans-serif;
-  width: 20rem;
+form {
+  width: 300px;
+  margin-right: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
+.header-search {
+  width: 90%;
+  height: 30px;
+  background-color: rgb(226, 226, 226);
+  padding: 10px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  font-family: "Inter var", sans-serif;
+}
+
+.header-search:focus {
+  outline: none;
+}
+
+.header-search-btn {
+  width: 10%;
+  min-width: 26px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: rgb(226, 226, 226);
+  font-size: 1rem;
+  justify-content: flex-end;
+}
+
 .header-buttons {
-  margin-right: 2rem;
+  transition: all 0.5s;
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   align-items: flex-end;
+  font-size: 0.8rem;
 }
 
 .header-buttons a {
@@ -72,20 +94,35 @@ header {
   align-items: center;
 }
 
-@media screen and (max-width: 1744px) {
-  header {
-    width: 70%;
+.header-buttons-small {
+  display: none;
+  gap: 1rem;
+  align-items: flex-end;
+  font-size: 1rem;
+}
+
+.header-buttons-small a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  gap: 8px;
+  align-items: center;
+}
+
+@media screen and (max-width: 760px) {
+  .header-buttons {
+    display: none;
+  }
+  .header-buttons-small {
+    display: flex;
   }
 }
 
-@media screen and (max-width: 1498px) {
-  header {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 1498px) {
+@media screen and (max-width: 1000px) {
   header {
     width: 100%;
+  }
+  form {
+    width: 400px;
   }
 }
